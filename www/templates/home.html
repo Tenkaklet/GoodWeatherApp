@@ -1,0 +1,12 @@
+<ion-view id="Home">
+    <ion-content overflow-scroll="true" padding="true" class="has-header main-page">
+        <div class="animated fadeIn" id="FindMe">
+            <a class="button button-stable button-clear button-block" ng-click="getGeolocation()" ng-model="weatherLocation">Find Me!</a>
+                <p ng-show="Find" id="Find">(Press Find Me)</p>
+                <p ng-show="Second" id="Second">...It'll only take a second...</p>
+        </div>
+        <div ng-show="weatherResult">
+            <a href="#/weather/{{position}}" class="button button-clear button-block animated fadeIn">Press For Weather</a>
+        </div>
+    </ion-content>
+</ion-view>

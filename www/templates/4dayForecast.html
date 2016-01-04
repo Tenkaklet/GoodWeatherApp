@@ -1,0 +1,18 @@
+<ion-view id="FourDayForecast">
+	<ion-content overflow-scroll="true" padding="true" class="animated fadeIn has-header">
+		<header class="card">
+			<h2>{{city}}</h2>
+			<p>{{time | date: 'mediumDate'}}</p>
+		</header>
+		<div class="" id="forecast">
+			<div class="list" ng-repeat="day in forecastDay">
+				<div class="item item-thumbnail-left">
+					<img ng-src="{{day.icon_url}}" alt="" />
+					<h3>{{day.date.weekday}}</h3>
+					<p><small class="high">{{day.high.celsius}}&deg;</small> / <small class="low">{{day.low.celsius}}&deg;</small></p>
+					<h2>{{day.conditions}}</h2>
+				</div>
+			</div>
+		</div>
+  </ion-content>
+</ion-view>
